@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script src="java.js" defer></script>
+    
+    
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <img class="nav-logo" src="Untitled design (2).webp" alt="logo">
+            <div class="nav-imp"><div class="nav-imp-media"><ul class=".nav-icons-ul">
+                <li><a class="nav-icons" href="index.html" ><i class="fa-solid fa-house" ></i> Home</a></li>
+                <li><a class="nav-icons" href="about us.html"><i class="fa-solid fa-user" ></i> About us</a></li>
+                <li><a class="nav-icons" href="contact us.html"><i class="fa-solid fa-phone" ></i> Contact us</a></li>
+               <li> <a class="nav-icons" href="know more.html"><i class="fa-solid fa-question" ></i> Know more</a></li><ul>
+            </div>
+                <div id="menu"><i  class="fa-solid fa-bars" style="color: #ffffff;"></i></div>
+               
+            </div>
+        </div>
+      
+       
+        
+
+    </header>
+    <main>
+        <form  class="background" method="post" name="google-sheet">
+            <div class="contactus">
+                <div class="contactus-input"><input type="text" placeholder="Name" class="contactus-input-input" required="required" id="name" name="name"></div>
+                <br>
+                <div class="contactus-input"><input type="text" placeholder="Email adress" class="contactus-input-input" required="requried" id="email" name="email"></div>
+                <br>
+                <div class="contactus-input"><input type="text" placeholder="Phone number" class="contactus-input-input" required="required" id="phone-no" name="phone"></div>
+                <br>
+                <div class="contactus-input"><input type="submit" id="submit-button" name="submit"></div>
+            </div>
+
+        </form>
+
+    </main>
+    <footer><div class="share"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#0099ff" fill-opacity="1" d="M0,192L24,170.7C48,149,96,107,144,106.7C192,107,240,149,288,165.3C336,181,384,171,432,144C480,117,528,75,576,85.3C624,96,672,160,720,186.7C768,213,816,203,864,192C912,181,960,171,1008,176C1056,181,1104,203,1152,181.3C1200,160,1248,96,1296,101.3C1344,107,1392,181,1416,218.7L1440,256L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z"></path>
+          </svg>
+          <div class="shareicon">
+           <a href="https://www.instagram.com/qr/"><i id="social" class="fa-brands fa-instagram"> Instagram <p>amd agencies</p></i> </a>
+           <a href=""><i id="social" class="fa-brands fa-facebook-f"> Facebook <p>amd agencies</p></i></a>
+            <a href="#"><i id="social" class="fa-solid fa-envelope"> Gmail <p>amdagencies1@gmail.com</p> </i></a>
+            <a href="#"><i id="social" class="fa-solid fa-phone">  Contact </i></a>
+
+
+          </div>
+          </div>
+      <div id="bottom">
+        <pre>
+            All Rights Reserved | All Wrongs Reversed
+            Terms & Conditions | Privacy Policy | Disclaimer
+        </pre>
+      </div></footer>
+      <script> const scriptURL = 'https://script.google.com/macros/s/AKfycbzPS3dJHbXH9-5DRmMAewrJR0u8T7rHGhiXlRTunyVNrFMdOYFYibCYiqNOfXvtMcA/exec'
+        const form = document.forms['google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+            .catch(error => console.error('Error!', error.message))
+        })
+        reset();
+        return flase;
+        </script>
+</body>
+</html>
